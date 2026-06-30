@@ -1,0 +1,70 @@
+{
+    "name": "FocusFlow",
+    "short_name": "FocusFlow",
+    "description": "تطبيق إدارة الوقت والتركيز - مؤقت بومودورو، مهام، عادات",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0f1a",
+    "theme_color": "#10b981",
+    "orientation": "any",
+    "dir": "rtl",
+    "lang": "ar",
+    "categories": ["productivity", "utilities"],
+    "icons": [
+        {
+            "src": "/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "المهام",
+            "short_name": "المهام",
+            "description": "إدارة المهام اليومية",
+            "url": "/#tasks",
+            "icons": [
+                {
+                    "src": "/icons/tasks-96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "العادات",
+            "short_name": "العادات",
+            "description": "تتبع العادات اليومية",
+            "url": "/#habits",
+            "icons": [
+                {
+                    "src": "/icons/habits-96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "المؤقت",
+            "short_name": "المؤقت",
+            "description": "بدء جلسة تركيز",
+            "url": "/#timer",
+            "icons": [
+                {
+                    "src": "/icons/timer-96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+    "screenshots": [],
+    "prefer_related_applications": false
+}

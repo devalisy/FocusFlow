@@ -1,0 +1,21 @@
+{
+  "name": "focusflow",
+  "version": "1.0.0",
+  "description": "تطبيق إدارة الوقت والتركيز - مؤقت بومودورو، مهام، عادات",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx tauri dev",
+    "build": "npx tauri build",
+    "tauri": "tauri",
+    "generate-icons": "node src-tauri/icons/generate-icons.js"
+  },
+  "keywords": ["productivity", "pomodoro", "habits", "tasks"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.0"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.5.0"
+  }
+}
