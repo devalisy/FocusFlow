@@ -1,0 +1,34 @@
+name: Build Windows App with Pake
+
+on:
+  workflow_dispatch: # يتيح لك تشغيل البناء يدوياً بضغطة زر
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Pake CLI
+        run: npm install -g pake-cli
+
+      - name: Build Windows Executable
+        run: |
+          # تشغيل السيرفر في الخلفية
+          start-process node -ArgumentList "server.js"
+          # الانتظار 3 ثوانٍ ليتأكد من عمل السيرفر
+          Start-Sleep -Seconds 3
+          # بناء التطبيق عبر باكي وتحويل الرابط المحلي إلى exe للويندوز
+          pake http://localhost:3000 --name FocusFlow --transparent
+
+      - name: Upload Download Link
+        uses: actions/upload-artifact@v4
+        with:
+          name: FocusFlow-Windows-App
+          path: "*.exe"
